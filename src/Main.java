@@ -6,11 +6,12 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         Float[] paquete = new Float[4];
-        int direccion = 0;
-        Float coste = 0f;
-        String transporte = "";
+        int direccion;
+        Float coste;
+        String transporte;
         String[] embalaje = {"Palé", "Caja de cartón", "Caja de madera"};
-        Integer seleccionEmbalaje = 1;
+        Integer seleccionEmbalaje;
+
         System.out.println("Bienvenido a Correos Aitor");
         System.out.println("Introduzca las dimensiones del paquete que desea enviar:");
         try {
@@ -39,12 +40,13 @@ public class Main {
                 seleccionEmbalaje = Camion.tipoEmbalaje(paquete[0], paquete[1], paquete[2], paquete[3]);
             }
 
-            System.out.println("El paquete será enviado en " + transporte + " empaquetado en " + embalaje[seleccionEmbalaje] + " por un precio de " + coste);
+            if (seleccionEmbalaje != null) {
+                System.out.println("El paquete será enviado en " + transporte + " empaquetado en " + embalaje[seleccionEmbalaje] + " por un precio de " + coste);
+            }
         } catch (InputMismatchException ex) {
             System.out.println("[Error]: Los datos introducidos no son válidos.");
         }
 
         System.out.println("Hasta pronto!");
-
     }
 }
