@@ -5,6 +5,11 @@ public interface Transporte {
     Map<String, Integer> medidasPale = Map.of("largo", 120, "ancho", 80, "peso", 1500);
     Map<String, Integer> medidasMadera = Map.of("largo", 1148, "ancho", 226, "altura", 218, "peso", 25000);
 
-    Float costeTotal(Integer cp);
-    Integer tipoEmbalaje(Float x, Float y, Float z, Float peso);
+    static Float costeTotal(Integer cp) {
+        Float coste = Float.valueOf(cp);
+        return coste;
+    };
+    static Integer tipoEmbalaje(Float x, Float y, Float z, Float peso) {
+        return null;
+    };
 }
