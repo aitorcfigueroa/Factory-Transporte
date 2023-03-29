@@ -34,10 +34,14 @@ public class Main {
                 transporte = "Bicicleta";
                 coste = Bicicleta.costeTotal(direccion);
                 seleccionEmbalaje = Bicicleta.tipoEmbalaje(paquete[0], paquete[1], paquete[2], paquete[3]);
-            } else {
+            } else if (direccion < 3000){
                 transporte = "Camion";
                 coste = Camion.costeTotal(direccion);
                 seleccionEmbalaje = Camion.tipoEmbalaje(paquete[0], paquete[1], paquete[2], paquete[3]);
+            } else {
+                transporte = "Barco";
+                coste = Barco.costeTotal(direccion);
+                seleccionEmbalaje = Barco.tipoEmbalaje(paquete[0], paquete[1], paquete[2], paquete[3]);
             }
 
             if (seleccionEmbalaje != null) {
