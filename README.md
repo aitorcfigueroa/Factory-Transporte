@@ -13,3 +13,6 @@ Realiza una aplicación en java que distinga diferentes tipo de transporte para 
       - 0 - palet
       - 1 - envoltorio cartón
       - 2 - caja de madera
+
+## Examen
+Añadida la clase Barco que implementa los métodos comunes de la interfaz de transporte.
