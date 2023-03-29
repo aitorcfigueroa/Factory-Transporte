@@ -1,5 +1,11 @@
 import java.util.Map;
 
+/**
+ * Interfaz de transportes
+ *
+ * @author Aitor Couñago Figueroa
+ * @version 1.0
+ */
 public interface Transporte {
     Map<String, Integer> medidasCarton = Map.of("largo", 70, "ancho", 50, "alto", 70, "peso", 90);
     Map<String, Integer> medidasPale = Map.of("largo", 120, "ancho", 80, "peso", 1500);
